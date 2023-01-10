@@ -1,0 +1,252 @@
+* {
+    margin-bottom: 5px;
+    font-family: century;
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #0040ca, #8ecdff);
+    /*height: 55pt;*/
+    /*max-width: 1200px;*/
+    margin: auto;
+}
+
+body {
+    margin: 0px;
+    background-color: #535353;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*top button selection*/
+
+ul {
+    float: right;
+    padding: 5px 20px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+ul li a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    /**/
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+    text-orientation: sideways;
+    transition: unset;
+    transition: width 1s, height 1s, background-color 1s, transform 0.5s;
+}
+
+ul li.active a {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*for logo...not in use*/
+
+.logo img {
+    background-color: rgb(170, 207, 212);
+    height: top;
+    float: left;
+    width: 150px;
+    height: auto;
+}
+
+
+/*for text where to start*/
+
+.title {
+    position: absolute;
+    /*background-color: DodgerBlue;*/
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    color: rgb(7, 7, 7);
+    align-self: center;
+    font-size: 200%;
+}
+
+.title h2 {
+    color: rgb(0, 0, 0);
+}
+
+
+/*not in use*/
+
+.title small {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.topleft h3 {
+    float: left;
+    list-style-type: none;
+    padding: 0px 0px;
+    margin: 0%;
+    text-decoration: none;
+    background-color: #424242;
+    color: #fff;
+    text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+.button {
+    text-align: center;
+    height: 155pt;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70em;
+    transform: (-50%, -50%);
+}
+
+.button_date {
+    position: absolute;
+    color: rgb(97, 97, 97);
+    top: 55%;
+    left: 65%;
+    transform: (-50%, -50%);
+}
+
+.btn {
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: rgb(36, 33, 33);
+    text-decoration: none;
+    transition: 0.6 ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/********************Multiple animated properties************************/
+
+.box {
+    position: relative;
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    display: table;
+    top: 60px;
+    margin-left: 30%;
+    /*
+    top: 45%;
+    left: 50%;*/
+    width: 450px;
+    height: 100px;
+    background-color: #ff7300;
+    text-orientation: sideways;
+    transition: unset;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+    background-color: #0e9e15;
+    width: 550px;
+    height: 200px;
+}
+
+
+/*******************************project 1*************************************/
+
+table {
+    /*
+    margin-left: 10%;
+    */
+    margin-right: 100px;
+    width: 80%;
+    margin: 10% auto;
+    background: rgb(49, 118, 197);
+}
+
+table.list {
+    text-align: center;
+    color: #eee;
+    width: 100%;
+}
+
+td {
+    color: #eee;
+    border: 1px solid rgb(204, 200, 200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even),
+table.list thread>tr {
+    background-color: rgb(0, 162, 211);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 90%;
+    padding: 1% 5%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165, 161, 161);
+    border-radius: 4px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: #eee;
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover {
+    background: #4b99d8;
+}
+
+
+/*******************************project 2*************************************/
