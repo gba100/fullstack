@@ -1,6 +1,6 @@
 * {
     margin-bottom: 5px;
-    font-family: century;
+    font-family: Helvetica;
     text-align: center;
 }
 
@@ -17,22 +17,15 @@
 
 body {
     margin: 0px;
+    text-align: center;
     background-color: #535353;
-}
-
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    height: 100%;
-    background-size: cover;
-    background-position: center;
 }
 
 
 /*top button selection*/
 
 ul {
-    float: right;
-    padding: 5px 20px;
+    padding: 3px 20px;
 }
 
 ul li {
@@ -52,10 +45,7 @@ ul li a {
 ul li a:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    /**/
     text-align: center;
-    border-style: hidden;
-    border-width: 0px;
     margin: 5px;
     width: auto;
     height: auto;
@@ -64,19 +54,35 @@ ul li a:hover {
     transition: width 1s, height 1s, background-color 1s, transform 0.5s;
 }
 
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    ul li a:hover {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    ul li a:hover {
+        width: 75%;
+    }
+}
+
 ul li.active a {
     background-color: #fff;
     color: #000;
 }
 
 
-/*for logo...not in use*/
+/**********pc logo***************/
 
 .logo img {
-    background-color: rgb(170, 207, 212);
+    /*background-color: rgb(61, 61, 61);*/
+    margin-left: 28%;
     height: top;
     float: left;
-    width: 150px;
+    width: 45%;
     height: auto;
 }
 
@@ -86,7 +92,7 @@ ul li.active a {
 .title {
     position: absolute;
     /*background-color: DodgerBlue;*/
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -112,12 +118,18 @@ ul li.active a {
     font-size: 20px;
 }
 
+.nav {
+    overflow: hidden;
+    position: right;
+    top: 0;
+    float: right;
+}
+
 .topleft h3 {
+    position: fixed left;
+    top: 0;
     float: left;
-    list-style-type: none;
-    padding: 0px 0px;
-    margin: 0%;
-    text-decoration: none;
+    margin: 1%;
     background-color: #424242;
     color: #fff;
     text-shadow: #000 0px 0px 1px;
@@ -127,12 +139,21 @@ ul li.active a {
     transition: 0.5s ease;
 }
 
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .nav,
+    .topleft h3 {
+        float: none;
+        padding: 2%;
+        margin: 3%;
+        text-align: center;
+    }
+}
+
 .button {
     text-align: center;
     height: 155pt;
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 15%;
     width: 70em;
     transform: (-50%, -50%);
 }
@@ -158,6 +179,27 @@ ul li.active a {
     color: #000;
 }
 
+.contact {
+    position: relative;
+    text-align: center;
+    display: table;
+    top: 10%;
+    margin-left: 35%;
+    width: 35%;
+    background-color: #8bb8ff;
+    text-orientation: sideways;
+    border-radius: 1%;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .contact {
+        top: 10%;
+        margin-left: 18%;
+        width: 70%;
+    }
+}
+
 
 /********************Multiple animated properties************************/
 
@@ -167,23 +209,44 @@ ul li.active a {
     border-style: hidden;
     border-width: 0px;
     display: table;
-    top: 60px;
+    top: 100px;
     margin-left: 30%;
-    /*
-    top: 45%;
-    left: 50%;*/
     width: 450px;
     height: 100px;
-    background-color: #ff7300;
+    background-color: #8bb8ff;
     text-orientation: sideways;
     transition: unset;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 .box:hover {
-    background-color: #0e9e15;
+    background-color: #ffffff;
     width: 550px;
     height: 200px;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .box {
+        width: 30%;
+        margin-left: 35%;
+    }
+    .box:hover {
+        width: 30%;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .box {
+        width: 40%;
+        margin-left: 30%;
+    }
+    .box:hover {
+        width: 40%;
+        height: 150px;
+    }
 }
 
 
