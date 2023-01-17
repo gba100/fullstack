@@ -144,7 +144,7 @@ ul li.active a {
     .nav,
     .topleft h3 {
         float: none;
-        padding: 2%;
+        padding: 1%;
         margin: 3%;
         text-align: center;
     }
@@ -172,6 +172,18 @@ ul li.active a {
     color: rgb(36, 33, 33);
     text-decoration: none;
     transition: 0.6 ease;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .btn {
+        border: 1px solid white;
+        padding: 10px 25px;
+        margin: 0.3%;
+        color: rgb(36, 33, 33);
+        text-decoration: none;
+        transition: 0.6 ease;
+    }
 }
 
 .btn:hover {
