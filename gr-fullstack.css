@@ -6,7 +6,7 @@
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     position: relative;
     overflow: hidden;
     background: linear-gradient(to right, #0040ca, #8ecdff);
@@ -92,7 +92,7 @@ ul li.active a {
 .title {
     position: absolute;
     /*background-color: DodgerBlue;*/
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -105,6 +105,26 @@ ul li.active a {
 
 .title h2 {
     color: rgb(0, 0, 0);
+}
+
+.projects {
+    margin-top: 5%;
+    margin-left: 25%;
+    padding-left: 1%;
+    text-anchor: start;
+    text-align: left;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .projects {
+        margin-left: 10%;
+        width: 80%;
+    }
 }
 
 
@@ -178,7 +198,7 @@ ul li.active a {
     /* styles for screens smaller than 768px */
     .btn {
         border: 1px solid white;
-        padding: 10px 25px;
+        padding: 10px 17px;
         margin: 0.3%;
         color: rgb(36, 33, 33);
         text-decoration: none;
@@ -206,9 +226,9 @@ ul li.active a {
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     .contact {
-        top: 10%;
-        margin-left: 18%;
-        width: 70%;
+        top: 5%;
+        margin-left: 10%;
+        width: 80%;
     }
 }
 
