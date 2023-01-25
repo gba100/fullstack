@@ -34,23 +34,49 @@
     <div class="main">
 
         <div class="contact">
-            <h1><strong>contact me via email "llink"</strong></h1>
+            <h1><strong>contact me via email</strong></h1>
 
-            <a href="mailto:galbenamy@gmail.com">Mail me</a>
+            <a href="mailto:galbenamy@gmail.com">Email me</a>
 
 
             <form class="" action="mailto:galbenamy@gmail.com" method="post" enctype="text/plain">
+
                 <label>your name:</label>
-                <input type="text" name="yourName" value="">
+                <div class="flex-container">
+                    <input type="text" name="yourName" value="">
+                </div>
+
                 <label>your email:</label>
-                <input type="email" name="yourEmail" value="">
+                <div class="flex-container">
+                    <input type="email" name="yourEmail" value="">
+                </div>
+
                 <label>your message:</label>
-                <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
+                <div class="flex-container">
+                    <textarea name="yourMessage" class="fill-width" rows="10" cols="30"></textarea><br>
+                </div>
+                <!--submit button-->
                 <input type="submit" name="">
 
 
         </div>
-    </div>
+
+        <div class="contact">
+            <p>
+                Hi, I'm Gal.<br> I am a fullstack developer
+            </p>
+
+            <div class="logo">
+                <ul>
+                    <a href="https://github.com/gba100" class="icon"><img src="github.png"></a>
+                    <a href="mailto:galbenamy@gmail.com" class="icon"><img src="gmail.png"></a>
+                    <a href="https://www.linkedin.com/in/gal-ben-amy-05b5691a0/" class="icon"><img src="linkedin.png"></a>
+                </ul>
+            </div>
+            <!--<img src="dots.svg" alt="My Happy SVG" />-->
+        </div>
+
+
 
 </body>
 

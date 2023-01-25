@@ -1,6 +1,7 @@
 * {
     margin-bottom: 5px;
-    font-family: Helvetica;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
     text-align: center;
 }
 
@@ -22,10 +23,46 @@ body {
 }
 
 
-/*top button selection*/
+/**navagation bar**/
+
+.nav {
+    float: right;
+}
+
+.topleft h3 {
+    position: fixed left;
+    top: 0;
+    margin-top: 0.8%;
+    margin-bottom: 1%;
+    margin-left: 0.4%;
+    float: left;
+    font-size: 100%;
+    border-radius: 15px;
+    background-color: #424242;
+    color: #fff;
+    text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .nav,
+    .topleft h3 {
+        float: none;
+        padding: 1%;
+        margin: 0%;
+        text-align: center;
+    }
+}
+
+
+/*top right button selection*/
 
 ul {
-    padding: 3px 20px;
+    padding: 5px 5px;
 }
 
 ul li {
@@ -34,11 +71,11 @@ ul li {
 
 ul li a {
     text-decoration: none;
+    border-radius: 5px;
     color: #fff;
     text-shadow: #000 0px 0px 1px;
     -webkit-font-smoothing: antialiased;
     padding: 5px 20px;
-    border: 1px solid transparent;
     transition: 0.5s ease;
 }
 
@@ -51,7 +88,7 @@ ul li a:hover {
     height: auto;
     text-orientation: sideways;
     transition: unset;
-    transition: width 1s, height 1s, background-color 1s, transform 0.5s;
+    transition: width 0.8s, height 0.8s, background-color 0.8s, transform 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -86,41 +123,37 @@ ul li.active a {
     height: auto;
 }
 
-
-/*for text where to start*/
-
-.title {
-    position: absolute;
-    /*background-color: DodgerBlue;*/
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.title h1 {
-    color: rgb(7, 7, 7);
-    align-self: center;
-    font-size: 200%;
-}
-
-.title h2 {
-    color: rgb(0, 0, 0);
+.icon img {
+    /*background-color: rgb(61, 61, 61);*/
+    display: flex;
+    justify-content: center;
+    margin-left: 7%;
+    width: 15%;
+    height: auto;
 }
 
 .projects {
+    padding-top: 4%;
     margin-top: 5%;
     margin-left: 25%;
-    padding-left: 1%;
-    text-anchor: start;
+    padding-left: 2%;
     text-align: left;
     width: 800px;
     background-color: rgba(255, 255, 255, 0.233);
-    border-radius: 1%;
+    border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
+    .projects {
+        margin-left: 5%;
+        width: 85%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
     .projects {
         margin-left: 10%;
         width: 80%;
@@ -128,65 +161,51 @@ ul li.active a {
 }
 
 
-/*not in use*/
+/*project button*/
 
-.title small {
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
+.buttonprj {
+    text-align: center;
+    margin: 10% -80% 10% auto;
+    padding-bottom: 15%;
+    transform: (-50%, -50%);
 }
 
-.nav {
-    overflow: hidden;
-    position: right;
-    top: 0;
-    float: right;
-}
-
-.topleft h3 {
-    position: fixed left;
-    top: 0;
-    float: left;
-    margin: 1%;
-    background-color: #424242;
-    color: #fff;
-    text-shadow: #000 0px 0px 1px;
-    -webkit-font-smoothing: antialiased;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 0.5s ease;
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens smaller than 768px */
+    .buttonprj {
+        margin-left: -20%;
+    }
 }
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
-    .nav,
-    .topleft h3 {
-        float: none;
-        padding: 1%;
-        margin: 3%;
-        text-align: center;
+    .buttonprj {
+        margin-left: -20%;
     }
 }
 
+
+/**button array &  behavior**/
+
 .button {
     text-align: center;
-    height: 155pt;
-    padding-top: 15%;
-    width: 70em;
+    margin-top: 5%;
     transform: (-50%, -50%);
 }
 
-.button_date {
-    position: absolute;
-    color: rgb(97, 97, 97);
-    top: 55%;
-    left: 65%;
-    transform: (-50%, -50%);
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens smaller than 768px */
+    .button {
+        padding-top: 5%;
+        transform: none;
+    }
 }
+
+
+/**actual button size & color **/
 
 .btn {
+    border-radius: 5px;
     border: 1px solid white;
     padding: 10px 30px;
     color: rgb(36, 33, 33);
@@ -211,29 +230,8 @@ ul li.active a {
     color: #000;
 }
 
-.contact {
-    position: relative;
-    text-align: center;
-    display: table;
-    top: 10%;
-    margin-left: 35%;
-    width: 35%;
-    background-color: #8bb8ff;
-    text-orientation: sideways;
-    border-radius: 1%;
-}
 
-@media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
-    .contact {
-        top: 5%;
-        margin-left: 10%;
-        width: 80%;
-    }
-}
-
-
-/********************Multiple animated properties************************/
+/********************box (border of animated box) for index page************************/
 
 .box {
     position: relative;
@@ -241,18 +239,21 @@ ul li.active a {
     border-style: hidden;
     border-width: 0px;
     display: table;
-    top: 100px;
-    margin-left: 30%;
+    top: 50px;
+    width: 70rem;
+    transform: (-50%, -50%);
+    margin: auto auto 15px 37%;
     width: 450px;
     height: 100px;
     background-color: #8bb8ff;
     text-orientation: sideways;
     transition: unset;
+    border-radius: 5px;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 .box:hover {
-    background-color: #ffffff;
+    background-color: #ffffffbb;
     width: 550px;
     height: 200px;
 }
@@ -260,12 +261,14 @@ ul li.active a {
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     .box {
-        width: 30%;
-        margin-left: 35%;
+        width: 80%;
+        top: 0.8%;
+        margin-left: 10%;
     }
     .box:hover {
-        width: 30%;
-        height: 150px;
+        margin-left: 10%;
+        width: 80%;
+        height: auto;
     }
 }
 
@@ -279,6 +282,73 @@ ul li.active a {
         width: 40%;
         height: 150px;
     }
+}
+
+
+/*font last box on index page*/
+
+.box p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*****************contact page*******************/
+
+
+/*make text box fill screen */
+
+.flex-container {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fill-width {
+    flex: 1;
+}
+
+
+/*box for contact page*/
+
+.contact {
+    position: relative;
+    text-align: center;
+    display: table;
+    top: 5%;
+    padding-bottom: 15px;
+    margin-left: 35%;
+    width: 33%;
+    background-color: #8bb8ff;
+    text-orientation: sideways;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .contact {
+        top: 2%;
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .contact {
+        top: 5%;
+        margin-left: 10%;
+        width: 70%;
+    }
+}
+
+.bottomrow {
+    text-align: center;
+    margin-top: 10%;
+    height: 100px;
+    width: 100%;
+    float: bottom;
+    background-color: #535353;
 }
 
 
