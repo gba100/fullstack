@@ -1,19 +1,7 @@
 * {
-    margin-bottom: 5px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-align: center;
-}
-
-.main {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to right, #0040ca, #8ecdff);
-    /*height: 55pt;*/
-    /*max-width: 1200px;*/
-    margin: auto;
 }
 
 body {
@@ -22,28 +10,56 @@ body {
     background-color: #535353;
 }
 
+#home {
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    #home {
+        padding-top: 13%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #home {
+        padding-top: 10%;
+    }
+}
+
+home
 /**navagation bar**/
 
 .nav {
     float: right;
 }
 
+@media only screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=#000000');
+}
+
 .topleft h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: fixed left;
-    top: 0;
     margin-top: 0.8%;
-    margin-bottom: 1%;
     margin-left: 0.4%;
     float: left;
-    font-size: 100%;
+    font-size: 80%;
     border-radius: 15px;
     background-color: #424242;
+    outline-color: #000000;
     color: #fff;
     text-shadow: #000 0px 0px 1px;
     -webkit-font-smoothing: antialiased;
     padding: 5px 20px;
-    border: 1px solid transparent;
+    border: 5px solid;
     transition: 0.5s ease;
 }
 
@@ -61,15 +77,16 @@ body {
 
 /*top right button selection*/
 
-ul {
+.navbtn {
     padding: 5px 5px;
 }
 
-ul li {
+.navbtn li {
     display: inline-block;
+    margin-top: 1%;
 }
 
-ul li a {
+.navbtn li a {
     text-decoration: none;
     border-radius: 5px;
     color: #fff;
@@ -79,8 +96,8 @@ ul li a {
     transition: 0.5s ease;
 }
 
-ul li a:hover {
-    background-color: #ffffff;
+.navbtn li a:hover {
+    background-color: #ffff;
     color: rgb(0, 0, 0);
     text-align: center;
     margin: 5px;
@@ -93,20 +110,13 @@ ul li a:hover {
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
-    ul li a:hover {
+    .navbtn li a:hover {
         width: 100%;
         text-align: center;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens between 768px and 1200px */
-    ul li a:hover {
-        width: 75%;
-    }
-}
-
-ul li.active a {
+.navbtn li.active a {
     background-color: #fff;
     color: #000;
 }
@@ -132,14 +142,32 @@ ul li.active a {
     height: auto;
 }
 
+
+/* Footer Section */
+
+.social-icon {
+    margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+    #title {
+        text-align: center;
+    }
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
+}
+
 .projects {
     padding-top: 4%;
     margin-top: 5%;
-    margin-left: 25%;
+    margin-left: 20%;
+    padding-bottom: 10%;
     padding-left: 2%;
     text-align: left;
-    width: 800px;
-    background-color: rgba(255, 255, 255, 0.233);
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.233);
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -148,7 +176,7 @@ ul li.active a {
     /* styles for screens smaller than 768px */
     .projects {
         margin-left: 5%;
-        width: 85%;
+        width: 90%;
     }
 }
 
@@ -163,24 +191,23 @@ ul li.active a {
 
 /*project button*/
 
-.buttonprj {
+#buttonprj {
     text-align: center;
-    margin: 10% -80% 10% auto;
-    padding-bottom: 15%;
+    margin-left: 80%;
     transform: (-50%, -50%);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
     /* styles for screens smaller than 768px */
-    .buttonprj {
-        margin-left: -20%;
+    #buttonprj {
+        margin-left: 70%;
     }
 }
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
-    .buttonprj {
-        margin-left: -20%;
+    #buttonprj {
+        margin-left: 60%;
     }
 }
 
@@ -190,6 +217,7 @@ ul li.active a {
 .button {
     text-align: center;
     margin-top: 5%;
+    margin-left: -7%;
     transform: (-50%, -50%);
 }
 
@@ -204,6 +232,8 @@ ul li.active a {
 
 /**actual button size & color **/
 
+
+/*
 .btn {
     border-radius: 5px;
     border: 1px solid white;
@@ -214,7 +244,7 @@ ul li.active a {
 }
 
 @media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
+    ///styles for screens smaller than 768px 
     .btn {
         border: 1px solid white;
         padding: 10px 17px;
@@ -225,10 +255,12 @@ ul li.active a {
     }
 }
 
+
 .btn:hover {
     background-color: #fff;
     color: #000;
 }
+*/
 
 
 /********************box (border of animated box) for index page************************/
@@ -242,10 +274,10 @@ ul li.active a {
     top: 50px;
     width: 70rem;
     transform: (-50%, -50%);
-    margin: auto auto 15px 37%;
-    width: 450px;
+    margin: auto auto 15px 30%;
+    width: 40%;
     height: 100px;
-    background-color: #8bb8ff;
+    background-color: #dedede;
     text-orientation: sideways;
     transition: unset;
     border-radius: 5px;
@@ -253,8 +285,8 @@ ul li.active a {
 }
 
 .box:hover {
-    background-color: #ffffffbb;
-    width: 550px;
+    background-color: #3579f7;
+    width: 50%;
     height: 200px;
 }
 
@@ -300,8 +332,10 @@ ul li.active a {
 
 .flex-container {
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
 
 .fill-width {
@@ -313,15 +347,18 @@ ul li.active a {
 
 .contact {
     position: relative;
-    text-align: center;
     display: table;
-    top: 5%;
-    padding-bottom: 15px;
+    margin-top: 2%;
     margin-left: 35%;
     width: 33%;
-    background-color: #8bb8ff;
+    background-color: #b3b3b3;
     text-orientation: sideways;
     border-radius: 5px;
+}
+
+.contact h1 {
+    margin-top: 5%;
+    font-size: larger;
 }
 
 @media (max-width: 768px) {
@@ -342,15 +379,6 @@ ul li.active a {
     }
 }
 
-.bottomrow {
-    text-align: center;
-    margin-top: 10%;
-    height: 100px;
-    width: 100%;
-    float: bottom;
-    background-color: #535353;
-}
-
 
 /*******************************project 1*************************************/
 
@@ -359,7 +387,7 @@ table {
     margin-left: 10%;
     */
     margin-right: 100px;
-    width: 80%;
+    width: 60%;
     margin: 10% auto;
     background: rgb(49, 118, 197);
 }

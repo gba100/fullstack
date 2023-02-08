@@ -7,70 +7,103 @@
     <title>gr-fullstack.com</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="gr-fullstack.css">
-    <link rel="stylesheet" href="gr-fullstack.js">
+    <link rel="stylesheet" href="project1.js">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!--fonts library-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-    <div class="logo">
-        <!--<img src="logo.png">-->
-    </div>
-
-    <div class="topleft h3">
-        <h3>Gal Rosenbaum</h3>
-    </div>
-
-    <ul class="nav">
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">projects</a></li>
-        <li class="active"><a href="contact_me.html">contact me</a></li>
-    </ul>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">Gal Rozenbaum</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse mt-lg" id="navbarNav">
+                <ul class="navbar-nav ml-auto navbtn ">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact_me.html">contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </head>
 
 <body>
-    <br>
-    <table>
-        <tr>
-            <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
-                    <div>
-                        <label for="productCode">Product Code</label>
-                        <input type="text" name="productCode" id="productCode">
-                    </div>
-                    <div>
-                        <label for="product">Product Name</label>
-                        <input type="text" name="product" id="product">
-                    </div>
-                    <div>
-                        <label for="quantity">Quantity</label>
-                        <input type="number" name="quantity" id="quantity">
-                    </div>
-                    <div>
-                        <label for="perPrice">Price</label>
-                        <input type="number" name="perPrice" id="perPrice">
-                    </div>
+    <section id="home" class="jumbotron text-center mt-lg-4 ">
+        <h1 class="jumbotron-heading mt-lg-5">The new project will be coming Soon</h1>
+        <p class="lead text-muted">
+            I hope to relese it soon!
+        </p>
 
-                    <div class="form_action--button">
-                        <input type="submit" value="Submit">
-                        <input type="reset" value="Reset">
-                    </div>
-                </form>
-
+        <!--
+        <br>
+        <table>
+            <tr>
                 <td>
-                    <table class="list" id="storeList">
-                        <thead>
-                            <tr>
-                                <th>Product Code</th>
-                                <th>Product Name</th>
-                                <th>Qty</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <form autocomplete="off" onsubmit="onFormSubmit()">
+                        <div>
+                            <label for="productCode">Product Code</label>
+                            <input type="text" name="productCode" id="productCode">
+                        </div>
+                        <div>
+                            <label for="product">Product Name</label>
+                            <input type="text" name="product" id="product">
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" name="quantity" id="quantity">
+                        </div>
+                        <div>
+                            <label for="perPrice">Price</label>
+                            <input type="number" name="perPrice" id="perPrice">
+                        </div>
 
-                        </tbody>
-                    </table>
+                        <div class="form_action--button">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+
+                    <td>
+                        <table class="list" id="storeList">
+                            <thead>
+                                <tr>
+                                    <th>Product Code</th>
+                                    <th>Product Name</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </td>
                 </td>
-            </td>
-        </tr>
-    </table>
-    <script type="text/javascript" src="./script.js"></script>
+            </tr>
+        </table>
+        <script type="text/javascript" src="./script.js"></script>
+        -->
+    </section>
+    <footer class="bg-dark text-center text-white pt-2 pb-4 ">
+        <a href="https://github.com/gba100" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-github"></i></a>
+        <a href="mailto:galbenamy@gmail.com" class="btn btn-outline-light btn-floating m-1"> <i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/gal-ben-amy-05b5691a0/" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-linkedin"></i></a>
+    </footer>
+
+    <footer class="bg-dark text-center text-white">
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <a>© 2023 Copyright:</a>
+            <a class="text-white" href="https://gba100.github.io/fullstack/">Gal Rozenbaum</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
