@@ -1,19 +1,40 @@
 * {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-align: center;
 }
 
 body {
+    background-color: #e9ecef;
     margin: 0px;
     text-align: center;
-    background-color: #535353;
 }
 
 #home {
+    background-color: #3579f700;
     margin-bottom: 0px;
-    border-radius: 0px;
+    padding-bottom: 0%;
 }
+
+
+/*
+.topsec {
+    background-color: rgb(128, 0, 0);
+    padding: 10%;
+    height: 50%;
+}
+
+.midsec {
+    background-color: green;
+    padding: 10%;
+    height: 50%;
+}
+
+.botsec {
+    background-color: rgb(0, 77, 128);
+    padding: 10%;
+    height: 50%;
+}*/
 
 @media (min-width: 768px) and (max-width: 1200px) {
     /* styles for screens between 768px and 1200px */
@@ -136,7 +157,7 @@ home
 }
 
 
-/**********pc logo***************/
+/**********logo& social-icon ***************/
 
 .logo img {
     /*background-color: rgb(61, 61, 61);*/
@@ -156,9 +177,6 @@ home
     height: auto;
 }
 
-
-/* Footer Section */
-
 .social-icon {
     margin: 20px 10px;
 }
@@ -173,10 +191,13 @@ home
     }
 }
 
+
+/*****************projects page*******************/
+
 .projects {
     padding-top: 4%;
     margin-top: 5%;
-    margin-left: 20%;
+    margin-left: 22%;
     padding-bottom: 10%;
     padding-left: 2%;
     text-align: left;
@@ -189,6 +210,7 @@ home
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     .projects {
+        padding-bottom: 9%;
         margin-left: 5%;
         width: 90%;
     }
@@ -199,6 +221,26 @@ home
     .projects {
         margin-left: 10%;
         width: 80%;
+    }
+}
+
+.card {
+    width: 70%;
+    padding: 3%;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens smaller than 768px */
+    .card {
+        width: 60%;
+        padding: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .card {
+        margin-left: 15%;
     }
 }
 
@@ -221,7 +263,8 @@ home
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     #buttonprj {
-        margin-left: 60%;
+        margin-top: 50%;
+        margin-left: 33.5%;
     }
 }
 
@@ -311,7 +354,7 @@ home
     position: relative;
     display: table;
     margin-top: 2%;
-    margin-left: 35%;
+    margin-left: 33%;
     width: 33%;
     background-color: #b3b3b3;
     text-orientation: sideways;
@@ -336,71 +379,112 @@ home
     /* styles for screens between 768px and 1200px */
     .contact {
         top: 5%;
-        margin-left: 10%;
+        margin-left: 15%;
         width: 70%;
     }
+}
+
+.copyright-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 
 /*******************************project 1*************************************/
 
-table {
-    /*
-    margin-left: 10%;
-    */
-    margin-right: 100px;
-    width: 60%;
-    margin: 10% auto;
-    background: rgb(49, 118, 197);
+form {
+    margin-top: 40px;
 }
 
-table.list {
-    text-align: center;
-    color: #eee;
-    width: 100%;
-}
-
-td {
-    color: #eee;
-    border: 1px solid rgb(204, 200, 200);
-    text-align: left;
-    padding: 8px 15px;
-}
-
-tr:nth-child(even),
-table.list thread>tr {
-    background-color: rgb(0, 162, 211);
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 90%;
-    padding: 1% 5%;
-    margin: 8px 0;
+input {
     display: inline-block;
-    border: 1px solid rgb(165, 161, 161);
-    border-radius: 4px;
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background: #eee;
-    padding: 6px 12px;
-    margin: 15px 0 10px;
-    display: inline-block;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #3f3737;
+    border-radius: 5px;
+    font-size: 1.2rem;
     outline: none;
 }
 
-input[type="submit"]:hover {
-    background: #4b99d8;
+.boxweather {
+    background-color: #fff;
+    border: 1px solid #9cebff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-input[type="reset"]:hover {
-    background: #4b99d8;
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .boxweather {
+        margin-bottom: 60%;
+    }
+}
+
+.weather-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weather-info__item {
+    margin: 20px;
+    padding: 20px;
+    background-color: #75797a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#desc {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#weatherData {
+    display: none;
+}
+
+#temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#humidity,
+#windSpeed,
+#sunrise,
+#sunset {
+    margin-top: 10px;
+}
+
+.containerproj1 {
+    width: 70rem;
+    margin-left: 23%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .containerproj1 {
+        width: 20rem;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .containerproj1 {
+        width: 30rem;
+        margin-left: 25.5%;
+        margin-bottom: 5%;
+    }
 }
 
 

@@ -7,7 +7,7 @@
     <title>gr-fullstack.com</title>
     <link rel="stylesheet" href="gr-fullstack.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="project1.js">
+    <script src="project1.js"></script>
 
     <!--fonts library-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -34,83 +34,71 @@
         </div>
     </nav>
 
+    <!--weather script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <section id="home" class="jumbotron text-center mt-lg-4 ">
-        <h1 class="jumbotron-heading mt-lg-5">The new project will be coming Soon</h1>
-        <p class="lead text-muted">
-            I hope to relese it soon!
-        </p>
 
-        <!--
-        <br>
-        <table>
-            <tr>
-                <td>
-                    <form autocomplete="off" onsubmit="onFormSubmit()">
-                        <div>
-                            <label for="productCode">Product Code</label>
-                            <input type="text" name="productCode" id="productCode">
-                        </div>
-                        <div>
-                            <label for="product">Product Name</label>
-                            <input type="text" name="product" id="product">
-                        </div>
-                        <div>
-                            <label for="quantity">Quantity</label>
-                            <input type="number" name="quantity" id="quantity">
-                        </div>
-                        <div>
-                            <label for="perPrice">Price</label>
-                            <input type="number" name="perPrice" id="perPrice">
-                        </div>
-
-                        <div class="form_action--button">
-                            <input type="submit" value="Submit">
-                            <input type="reset" value="Reset">
-                        </div>
-                    </form>
-
-                    <td>
-                        <table class="list" id="storeList">
-                            <thead>
-                                <tr>
-                                    <th>Product Code</th>
-                                    <th>Product Name</th>
-                                    <th>Qty</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </td>
-                </td>
-            </tr>
-        </table>
-        <script type="text/javascript" src="./script.js"></script>
-        -->
-    </section>
-    <footer class="bg-dark text-center text-white pt-2 pb-4 ">
-        <a href="https://github.com/gba100" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-github"></i></a>
-        <a href="mailto:galbenamy@gmail.com" class="btn btn-outline-light btn-floating m-1"> <i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/gal-ben-amy-05b5691a0/" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-linkedin"></i></a>
-    </footer>
-
-    <footer class="bg-dark text-center text-white">
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <a>© 2023 Copyright:</a>
-            <a class="text-white" href="https://gba100.github.io/fullstack/">Gal Rozenbaum</a>
+    <section id="home" class="jumbotron jumbotron-fluid text-center mt-lg-4 ">
+        <div class="containerproj1 ">
+            <h1 class="text-center">Weather App</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="city" class="form-control" placeholder="Enter city name">
+                </div>
+                <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
+            </form>
+            <div id="weatherData" class="boxweather">
+                <div id="cityName" class="text-center"></div>
+                <div class="weather-info">
+                    <div class="weather-info__item">
+                        <div id="icon"></div>
+                        <div id="desc" class="text-center"></div>
+                        <div id="temp" class="text-center"></div>
+                        <div id="humidity" class="text-center"></div>
+                    </div>
+                    <div class="weather-info__item">
+                        <div id="windSpeed" class="text-center"></div>
+                        <div id="sunrise" class="text-center"></div>
+                        <div id="sunset" class="text-center"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Copyright -->
-    </footer>
+        <script>
+            $(document).ready(function() {
+                getWeatherData();
+            });
+        </script>
+
+    </section>
+    <section class="copyright-container">
+        <footer class="bg-dark text-center text-white pt-2 pb-4 ">
+            <a href="https://github.com/gba100" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-github"></i></a>
+            <a href="mailto:galbenamy@gmail.com" class="btn btn-outline-light btn-floating m-1"> <i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/gal-ben-amy-05b5691a0/" class="btn btn-outline-light btn-floating m-1"><i class="fab fa-linkedin"></i></a>
+        </footer>
+
+
+        <footer class="bg-dark text-center text-white">
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <a> Powered by OpenWeatherMap API</a>
+                <a>© 2023 Copyright:</a>
+                <a class="text-white" href="https://gba100.github.io/fullstack/">Gal Rozenbaum</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </section>
+
 </body>
+
+</html>
