@@ -16,6 +16,10 @@ body {
     margin: 0% auto;
     margin-left: 10px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
 }
 
 #home {
@@ -23,17 +27,19 @@ body {
     margin: 5% auto auto auto;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
     /* styles for screens between 768px and 1200px */
     #home {
-        padding-top: 5%;
+        padding-top: 0%;
+        margin-top: 0px;
+        margin-bottom: 10rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
     #home {
         padding-top: 10%;
-        height: 57rem;
+        height: 50rem;
     }
 }
 
@@ -392,8 +398,8 @@ body {
 
 /*******************************project 1*************************************/
 
-form {
-    margin-top: 40px;
+.form {
+    margin: 40px 0 0 0;
 }
 
 input {
@@ -411,14 +417,40 @@ input {
     border: 1px solid #9cebff;
     border-radius: 5px;
     padding: 20px;
-    margin-top: 40px;
+    margin: 40px 0 0 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
 }
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     .boxweather {
         margin: 5% auto;
+    }
+}
+
+.containerproj1 {
+    width: 70rem;
+    margin: 0% auto;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .containerproj1 {
+        height: 65rem;
+        width: 20rem;
+        margin-top: 0px;
+        margin: 10% auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .containerproj1 {
+        height: 30rem;
+        width: 50rem;
+        margin: 10% auto;
     }
 }
 
@@ -457,34 +489,10 @@ input {
 }
 
 #humidity,
-#windSpeed,
+#wind-speed,
 #sunrise,
 #sunset {
     margin-top: 10px;
-}
-
-.containerproj1 {
-    width: 70rem;
-    margin: 0% auto;
-    margin-bottom: 5%;
-}
-
-@media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
-    .containerproj1 {
-        height: 65rem;
-        width: 20rem;
-        margin-top: 0px;
-        margin: 10% auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens between 768px and 1200px */
-    .containerproj1 {
-        width: 30rem;
-        margin: 5% auto;
-    }
 }
 
 

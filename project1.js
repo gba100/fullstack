@@ -9,9 +9,10 @@ function getWeatherData() {
             "&appid=" +
             API_KEY;
         $.getJSON(API_URL, function(data) {
-            var temp = data.main.temp - 273.15;
+            var temp = Math.round(data.main.temp - 273.15);
             $("#cityName").text("City: " + data.name);
-            $("#temp").text("Temperature: " + temp.toFixed(2) + "°C");
+            $("#temp").text("Temperature: " + temp + "°C");
+
             $("#humidity").text("Humidity: " + data.main.humidity + "%");
             $("#windSpeed").text("Wind Speed: " + data.wind.speed + "m/s");
             $("#desc").text("Description: " + data.weather[0].description);
