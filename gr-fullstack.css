@@ -1,24 +1,40 @@
 * {
     font-family: href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    text-align: center;
-}
-
-.center {
-    margin: 5% auto;
 }
 
 body {
     background-color: #e9ecef;
     margin: 0px;
-    text-align: center;
     margin: 5% auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0% auto;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #home {
     background-color: #3579f700;
-    margin-bottom: 0px;
-    padding-bottom: 0%;
+    margin: 5% auto auto auto;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    #home {
+        padding-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #home {
+        padding-top: 10%;
+        height: 57rem;
+    }
 }
 
 
@@ -41,21 +57,7 @@ body {
     height: 50%;
 }*/
 
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens between 768px and 1200px */
-    #home {
-        padding-top: 13%;
-    }
-}
 
-@media only screen and (max-width: 768px) {
-    #home {
-        padding-top: 20%;
-        height: 60rem;
-    }
-}
-
-home
 /**navagation bar**/
 
 .nav {
@@ -351,7 +353,6 @@ home
 .contact {
     position: relative;
     display: table;
-    margin-top: 2%;
     margin-left: 33%;
     width: 33%;
     background-color: #b3b3b3;
@@ -471,9 +472,10 @@ input {
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     .containerproj1 {
-        height: 60rem;
+        height: 65rem;
         width: 20rem;
-        margin: 15% auto;
+        margin-top: 0px;
+        margin: 10% auto;
     }
 }
 
