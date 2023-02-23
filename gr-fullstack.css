@@ -7,6 +7,7 @@ body {
     background-color: #e9ecef;
     margin: 0px;
     margin: 5% auto;
+    height: 100%;
 }
 
 .center {
@@ -22,24 +23,37 @@ body {
     padding: 0;
 }
 
-#home {
+#homesize {
+    height: 100vh;
     background-color: #3579f700;
-    margin: 5% auto auto auto;
+    margin: 0;
+    padding: 5% 0;
+}
+
+#pagessize {
+    height: 80vh;
+    background-color: #3579f700;
+    margin: 0;
+    padding: 5% 0;
 }
 
 @media (max-width: 1200px) {
     /* styles for screens between 768px and 1200px */
-    #home {
-        padding-top: 0%;
-        margin-top: 0px;
+    #pagessize,
+    #homesize {
+        padding-top: 0;
+        margin-top: 1rem;
         margin-bottom: 10rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    #home {
+    #pagessize,
+    #homesize {
+        margin-top: 1rem;
         padding-top: 10%;
-        height: 50rem;
+        height: auto;
+        min-height: 50rem;
     }
 }
 
@@ -269,13 +283,38 @@ body {
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
     #buttonprj {
+        flex-direction: column;
+        align-items: center;
         margin-top: 50%;
         margin-left: 33.5%;
+        transform: translate(0, -50%);
     }
 }
 
 
 /********************box (border of animated box) for index page************************/
+
+
+/*center box*/
+
+.box {
+    position: relative;
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    display: table;
+    width: 40%;
+    margin: 0 auto 15px;
+    height: 100px;
+    background-color: #dedede;
+    text-orientation: sideways;
+    transition: unset;
+    border-radius: 5px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+
+/*left box
 
 .box {
     position: relative;
@@ -293,7 +332,7 @@ body {
     transition: unset;
     border-radius: 5px;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
-}
+}*/
 
 .box:hover {
     background-color: #3579f7;
@@ -339,21 +378,6 @@ body {
 /*****************contact page*******************/
 
 
-/*make text box fill screen */
-
-.flex-container {
-    display: flex;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-
-.fill-width {
-    flex: 1;
-}
-
-
 /*box for contact page*/
 
 .contact {
@@ -390,9 +414,25 @@ body {
 }
 
 .copyright-container {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+    margin: 0%;
+    text-align: center;
+}
+
+.copyright-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .copyright-container {
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
 }
 
 
