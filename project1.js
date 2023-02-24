@@ -8,15 +8,19 @@ function getWeatherData() {
             city +
             "&appid=" +
             API_KEY;
+        // Check if input city is in Hebrew
+        if (/[\u0590-\u05FF]/.test(city)) {
+            API_URL += "&lang=he";
+        }
         $.getJSON(API_URL, function(data) {
             var temp = Math.round(data.main.temp - 273.15);
             var language = detectLanguage(city);
             if (language === "hebrew") {
-                $("#cityName").text("עיר: " + data.name);
-                $("#temp").text("טמפרטורה: " + temp + "°C");
+                $("#cityName").text("עיר" + ": " + city);
+                $("#temp").text(String(temp) + "°C" + " : טמפרטורה");
                 $("#humidity").text("לחות: " + data.main.humidity + "%");
-                $("#windSpeed").text("מהירות הרוח: " + data.wind.speed + "m/s");
-                $("#desc").text("תיאור: " + data.weather[0].description);
+                $("#windSpeed").text(data.wind.speed + "m/s" + " :מהירות הרוח");
+                $("#desc").text("תיאור" + ": " + data.weather[0].description);
                 $("#sunrise").text("זריחה: " + new Date(data.sys.sunrise * 1000).toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }));
                 $("#sunset").text("שקיעה: " + new Date(data.sys.sunset * 1000).toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }));
                 $("#icon").html(
