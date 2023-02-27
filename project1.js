@@ -1,13 +1,13 @@
 const API_KEY = "278942cc7350d2a53d3e933f351ba2bf";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid=" + API_KEY;
-
 const form = document.querySelector('.form');
 const weatherContainer = document.querySelector('.weather');
+$("#day").hide();
 
+//5 day forcast
 form.addEventListener('submit', event => {
     event.preventDefault();
-
-    let city = document.querySelector('#city').value.trim(); // remove leading/trailing spaces
+    var city = document.querySelector('#city').value.trim(); // remove leading/trailing spaces
     const hebrewRegex = /[\u0590-\u05FF]/; // regex to check for Hebrew characters
 
     const language = hebrewRegex.test(city) ? 'he' : 'en'; // determine language based on input
@@ -20,9 +20,9 @@ form.addEventListener('submit', event => {
             const forecastData = data.list.filter((item, index) => index % 8 === 0);
 
             const forecastHtml = forecastData.map(day => `
-        <div class="day">
+        <div id="day">
           <div>${formatDate(day.dt, language)}</div>
-          <div><img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"alt="${day.weather[0].description}" style="width: 80px; height: 80px;" /></div>
+          <div><img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"alt="${day.weather[0].description}/></div>
           <div class="temp">${day.main.temp.toFixed(0)}°C</div>
           <div class="description">${day.weather[0].description}</div>
         </div>
@@ -35,6 +35,7 @@ form.addEventListener('submit', event => {
         .catch(error => console.error(error));
 });
 
+//detect language for 5 day forcast
 function formatDate(timestamp, lang) {
     const date = new Date(timestamp * 1000);
     const dayOfWeek = new Intl.DateTimeFormat(lang, { weekday: 'short' }).format(date);
@@ -45,16 +46,13 @@ function formatDate(timestamp, lang) {
 
 
 
+
+///the main weather
 function getWeatherData() {
     $("form").submit(function(event) {
         event.preventDefault();
         var city = $("#city").val().trim(); // remove whitespace from the beginning and end of the city string
-        var API_KEY = "278942cc7350d2a53d3e933f351ba2bf";
-        var API_URL =
-            "https://api.openweathermap.org/data/2.5/weather?q=" +
-            city +
-            "&appid=" +
-            API_KEY;
+        var API_URL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + API_KEY;
         // Check if input city is in Hebrew
         if (/[\u0590-\u05FF]/.test(city)) {
             API_URL += "&lang=he";
@@ -90,11 +88,14 @@ function getWeatherData() {
                 );
             }
             // show weatherData div
-            $("#weatherData").show();
+            $("#day").show();
         });
     });
 }
 
+
+
+//detect language he or en for main
 function detectLanguage(text) {
     var hebrewChars = /[\u0590-\u05FF]/;
     for (var i = 0; i < text.length; i++) {
@@ -104,3 +105,4 @@ function detectLanguage(text) {
     }
     return "english";
 }
+

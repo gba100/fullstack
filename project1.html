@@ -47,19 +47,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <section id="pagessize" class="jumbotron jumbotron-fluid text-center ">
+    <section id="pagessize">
         <h1 class="text-center">Weather App</h1>
-        <form class="form">
-            <label for="city">Enter city:</label>
-            <input type="text" id="city" name="city" required>
+        <form class="form text-center" >
+
+            <input type="text" id="city" placeholder="Enter city" name="city" required>
             <button type="submit">Get Forecast</button>
         </form>
-        <div class="containerproj1 ">
+        <div class="containerproj1">
 
-            <div id="weatherData" class="boxweather">
-                <div id="cityName" class="text-center"></div>
-                <div class="weather-info">
+            <div  class="boxweather">
+
+                <div id="day" class="weather-info day current ">
                     <div class="weather-info__item">
+                        <div id="cityName" class="text-center"></div>
                         <div id="icon"></div>
                         <div id="desc" class="text-center"></div>
                         <div id="temp" class="text-center"></div>
@@ -78,6 +79,8 @@
                 getWeatherData();
             });
         </script>
+
+        
         <div class="weather">
             <h2 class="city"></h2>
             <div class="forecast"></div>
