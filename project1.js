@@ -4,7 +4,6 @@ const form = document.querySelector('.form');
 const weatherContainer = document.querySelector('.weather');
 $("#day").hide();
 
-//5 day forcast
 form.addEventListener('submit', event => {
     event.preventDefault();
     var city = document.querySelector('#city').value.trim(); // remove leading/trailing spaces
@@ -33,34 +32,18 @@ form.addEventListener('submit', event => {
             weatherContainer.style.display = 'block';
         })
         .catch(error => console.error(error));
-});
 
-//detect language for 5 day forcast
-function formatDate(timestamp, lang) {
-    const date = new Date(timestamp * 1000);
-    const dayOfWeek = new Intl.DateTimeFormat(lang, { weekday: 'short' }).format(date);
-    const month = new Intl.DateTimeFormat(lang, { month: 'short' }).format(date);
-    const dayOfMonth = date.getDate();
-    return `${dayOfWeek}, ${dayOfMonth} ${month}`;
-}
-
-
-
-
-///the main weather
-function getWeatherData() {
-    $("form").submit(function(event) {
-        event.preventDefault();
-        var city = $("#city").val().trim(); // remove whitespace from the beginning and end of the city string
-        var API_URL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + API_KEY;
-        // Check if input city is in Hebrew
-        if (/[\u0590-\u05FF]/.test(city)) {
-            API_URL += "&lang=he";
-        }
-        $.getJSON(API_URL, function(data) {
+    // Get current weather data
+    var API_URL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + API_KEY;
+    // Check if input city is in Hebrew
+    if (hebrewRegex.test(city)) {
+        API_URL += "&lang=he";
+    }
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
             var temp = Math.round(data.main.temp - 273.15);
-            var language = detectLanguage(city);
-            if (language === "hebrew") {
+            if (language === "he") {
                 $("#cityName").text("עיר" + ": " + city);
                 $("#temp").text(String(temp) + "°C" + " : טמפרטורה");
                 $("#humidity").text("לחות: " + data.main.humidity + "%");
@@ -71,7 +54,7 @@ function getWeatherData() {
                 $("#icon").html(
                     "<img src='http://openweathermap.org/img/wn/" +
                     data.weather[0].icon +
-                    "@2x.png'>"
+                    "@4x.png'>"
                 );
             } else {
                 $("#cityName").text("City: " + data.name);
@@ -84,25 +67,33 @@ function getWeatherData() {
                 $("#icon").html(
                     "<img src='http://openweathermap.org/img/wn/" +
                     data.weather[0].icon +
-                    "@2x.png'>"
+                    "@4x.png'>"
                 );
             }
             // show weatherData div
             $("#day").show();
         });
     });
-}
 
 
 
-//detect language he or en for main
-function detectLanguage(text) {
+
+function formatDate(timestamp) {
+    const lang = detectLanguage(document.body.innerText); // replace document.body.innerText with your text input
+    const date = new Date(timestamp * 1000);
+    const dayOfWeek = new Intl.DateTimeFormat(lang, { weekday: 'short' }).format(date);
+    const month = new Intl.DateTimeFormat(lang, { month: 'short' }).format(date);
+    const dayOfMonth = date.getDate();
+    return `${dayOfWeek}, ${dayOfMonth} ${month}`;
+  }
+  
+  function detectLanguage(text) {
     var hebrewChars = /[\u0590-\u05FF]/;
     for (var i = 0; i < text.length; i++) {
-        if (hebrewChars.test(text.charAt(i))) {
-            return "hebrew";
-        }
+      if (hebrewChars.test(text.charAt(i))) {
+        return "hebrew";
+      }
     }
     return "english";
-}
-
+  }
+  
