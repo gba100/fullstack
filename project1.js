@@ -64,36 +64,27 @@ form.addEventListener('submit', event => {
                 $("#desc").text("Description: " + data.weather[0].description);
                 $("#sunrise").text("Sunrise: " + new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
                 $("#sunset").text("Sunset: " + new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
-                $("#icon").html(
-                    "<img src='http://openweathermap.org/img/wn/" +
-                    data.weather[0].icon +
-                    "@4x.png'>"
-                );
+                $("#icon").html("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + "@4x.png'>");
             }
             // show weatherData div
             $("#day").show();
         });
-    });
+});
 
-
-
-
-function formatDate(timestamp) {
-    const lang = detectLanguage(document.body.innerText); // replace document.body.innerText with your text input
+function formatDate(timestamp, lang) {
     const date = new Date(timestamp * 1000);
     const dayOfWeek = new Intl.DateTimeFormat(lang, { weekday: 'short' }).format(date);
     const month = new Intl.DateTimeFormat(lang, { month: 'short' }).format(date);
     const dayOfMonth = date.getDate();
     return `${dayOfWeek}, ${dayOfMonth} ${month}`;
-  }
-  
-  function detectLanguage(text) {
+}
+function detectLanguage(text) {
     var hebrewChars = /[\u0590-\u05FF]/;
     for (var i = 0; i < text.length; i++) {
-      if (hebrewChars.test(text.charAt(i))) {
-        return "hebrew";
-      }
+        if (hebrewChars.test(text.charAt(i))) {
+            return "hebrew";
+        }
     }
     return "english";
-  }
-  
+}
+
