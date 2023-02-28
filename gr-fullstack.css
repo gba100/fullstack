@@ -7,6 +7,8 @@ body {
     margin: 0px;
     margin: 5% auto;
     height: 100%;
+    background-image: url("blue-concrete-wall-with-scratches.jpg");
+
 }
 
 .center {
@@ -26,6 +28,7 @@ body {
     background-color: #3579f700;
     margin: 0;
     padding: 5% 0;
+    background-image: url("blue-concrete-wall-with-scratches.jpg");
 }
 
 #pagessize {
@@ -57,28 +60,7 @@ body {
 }
 
 
-/*
-.topsec {
-    background-color: rgb(128, 0, 0);
-    padding: 10%;
-    height: 50%;
-}
-
-.midsec {
-    background-color: green;
-    padding: 10%;
-    height: 50%;
-}
-
-.botsec {
-    background-color: rgb(0, 77, 128);
-    padding: 10%;
-    height: 50%;
-}*/
-
-
-/**navagation bar**/
-
+/************************navbar***********************/
 .nav {
     float: right;
     margin: 5% auto;
@@ -204,6 +186,208 @@ body {
 .social-icon {
     margin: 20px 10px;
 }
+/*
+.topsec {
+    background-color: rgb(128, 0, 0);
+    padding: 10%;
+    height: 50%;
+}
+
+.midsec {
+    background-color: green;
+    padding: 10%;
+    height: 50%;
+}
+
+.botsec {
+    background-color: rgb(0, 77, 128);
+    padding: 10%;
+    height: 50%;
+}*/
+
+
+/**navagation bar**/
+
+/********************box (border of animated box) for index page************************/
+
+
+.box {
+    position: relative;
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    display: table;
+    width: 40%;
+    height: 100px;
+    background-color: #dedede;
+    text-orientation: sideways;
+    transition: unset;
+    border-radius: 5px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+    background-color: #3579f7;
+    width: 50%;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .box {
+        width: 80%;
+        top: 0.8%;
+        margin-left: 10%;
+    }
+    .box:hover {
+        margin-left: 10%;
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .box {
+        width: 40%;
+        margin-left: 30%;
+    }
+    .box:hover {
+        width: 40%;
+        height: 150px;
+    }
+}
+
+/*font last box on index page*/
+.box p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.slide {
+    margin-top: 2%;
+    top: 80%;
+    height: 200px;
+    left: 1%;
+    margin-left: 9.5%;
+    opacity: 0;
+    position: relative;
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    display: table;
+    width: 40%;
+    height: 100px;
+    background-color: #dedede;
+    text-orientation: sideways;
+    transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; /* added transition property */
+    border-radius: 5px;
+    }
+
+
+.slide.animate {
+    opacity: 1;
+    animation-name: move-box;
+    transform: translateX(50%);
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    
+}
+
+.slide.hide {
+    transform: translateX(0px);
+    opacity: 0;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes move-box {
+    0% {
+        right: -100px;
+    }
+    100% {
+        right: calc(50% - 50px);
+    }
+}
+
+.slide:hover {
+    position: relative;
+    text-align: center;
+    border-style: hidden;
+    border-width: 0px;
+    display: table;
+    width: 44%; /* increased width */
+    height: 200px;
+    text-orientation: sideways;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    border-radius: 5px;
+    background-color: #3579f7;
+    }
+    
+    .slide:not(:hover) { 
+    height: 100px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; 
+    }
+
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    .slide {
+        width: 80%;
+
+        top: 0.8%;
+        margin-left: 0%;
+    }
+    .slide.animate{
+        transform: translateX(40px);
+
+    }
+    .slide:hover {
+   width: 80%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    /* styles for screens between 768px and 1200px */
+    .slide {
+        width: 90%;
+        top: 0.8%;
+        margin-left: 0%;
+    }
+    .slide.animate{
+        transform: translateX(40px);
+
+    }
+    .slide:hover {
+   width: 80%;
+        height: auto;
+    }
+}
+
+.pills{
+    display: inline-block;
+    padding: 6px 12px;
+    border: hidden;
+    border-radius: 20px;
+    background-color: #dd2d2d;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px;
+}
+.pills.blue{
+    background-color: #1772bd;
+}
+.pills.animate {
+    opacity: 1;
+    animation-name: move-box;
+    transform: translateX(550%);
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+}
 
 
 /*****************projects page*******************/
@@ -286,94 +470,10 @@ body {
     }
 }
 
-
-/********************box (border of animated box) for index page************************/
-
-
-/*center box*/
-
-.box {
-    position: relative;
-    text-align: center;
-    border-style: hidden;
-    border-width: 0px;
-    display: table;
-    width: 40%;
-    margin: 0 auto 15px;
-    height: 100px;
-    background-color: #dedede;
-    text-orientation: sideways;
-    transition: unset;
-    border-radius: 5px;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-}
+/*****************contact me page*******************/
 
 
-/*left box
-
-.box {
-    position: relative;
-    text-align: center;
-    border-style: hidden;
-    border-width: 0px;
-    display: table;
-    width: 70rem;
-    transform: (-50%, -50%);
-    margin: auto auto 15px 30%;
-    width: 40%;
-    height: 100px;
-    background-color: #dedede;
-    text-orientation: sideways;
-    transition: unset;
-    border-radius: 5px;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-}*/
-
-.box:hover {
-    background-color: #3579f7;
-    width: 50%;
-    height: 200px;
-}
-
-@media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
-    .box {
-        width: 80%;
-        top: 0.8%;
-        margin-left: 10%;
-    }
-    .box:hover {
-        margin-left: 10%;
-        width: 80%;
-        height: auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens between 768px and 1200px */
-    .box {
-        width: 40%;
-        margin-left: 30%;
-    }
-    .box:hover {
-        width: 40%;
-        height: 150px;
-    }
-}
-
-
-/*font last box on index page*/
-
-.box p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-
-/*****************contact page*******************/
-
-
-/*box for contact page*/
+/*box for contact me page*/
 
 .contact {
     position: relative;
