@@ -28,7 +28,6 @@ body {
     background-color: #3579f700;
     margin: 0;
     padding: 5% 0;
-    background-image: url("blue-concrete-wall-with-scratches.jpg");
 }
 
 #pagessize {
@@ -268,6 +267,8 @@ body {
 .slide {
     margin-top: 2%;
     top: 80%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     height: 200px;
     left: 1%;
     margin-left: 9.5%;
@@ -279,7 +280,7 @@ body {
     display: table;
     width: 40%;
     height: 100px;
-    background-color: #dedede;
+    background-color: #c8ddffd7;
     text-orientation: sideways;
     transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; /* added transition property */
     border-radius: 5px;
@@ -310,14 +311,14 @@ body {
         right: calc(50% - 50px);
     }
 }
-
+/*
 .slide:hover {
     position: relative;
     text-align: center;
     border-style: hidden;
     border-width: 0px;
     display: table;
-    width: 44%; /* increased width */
+    width: 44%; 
     height: 200px;
     text-orientation: sideways;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
@@ -329,7 +330,7 @@ body {
     height: 100px;
     transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; 
     }
-
+*/
 
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
@@ -343,10 +344,11 @@ body {
         transform: translateX(40px);
 
     }
+    /*
     .slide:hover {
    width: 80%;
         height: auto;
-    }
+    }*/
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -360,13 +362,24 @@ body {
         transform: translateX(40px);
 
     }
+       /*
     .slide:hover {
    width: 80%;
         height: auto;
-    }
+    }*/
 }
 
-.pills{
+.pill-container {
+    position: fixed;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 2%;
+    height: 2%;
+    z-index: -1;
+  }
+  
+  .pills {
+    position: absolute;
     display: inline-block;
     padding: 6px 12px;
     border: hidden;
@@ -377,29 +390,45 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 4px;
-}
-.pills.blue{
+    margin-left: 20%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
+  
+  .pills.blue {
     background-color: #1772bd;
-}
-.pills.animate {
+  }
+  
+  .pills.animate {
     opacity: 1;
     animation-name: move-box;
-    transform: translateX(550%);
     transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
     transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
-}
+  }
+  
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(200px, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+  }
+  
 
 
 /*****************projects page*******************/
 
 .projects {
-    padding-top: 4%;
+    padding: 2%;
     margin: 5% auto;
-    padding-bottom: 10%;
-    padding-left: 2%;
+   
     text-align: left;
-    width: 55%;
-    background-color: rgba(0, 0, 0, 0.233);
+    width: 50%;
+    background-color: #c8ddffd7;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -423,52 +452,60 @@ body {
     }
 }
 
-.card {
+
+  
+.card-container {
+    overflow: hidden;
+  }
+  
+  .card {
+    float: left;
     width: 70%;
+    height: 90%;
     padding: 3%;
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens smaller than 768px */
+  }
+  
+  @media (min-width: 768px) and (max-width: 1200px) {
     .card {
-        width: 60%;
-        padding: 3%;
+      width: 60%;
+      padding: 3%;
     }
-}
-
-@media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
+  }
+  
+  @media (max-width: 768px) {
     .card {
-        margin-left: 15%;
+      width: 90%;
+      margin-left: 5%;
     }
-}
+  }
 
 
 /*project button*/
 
 #buttonprj {
+    margin-top: 4%;
+    margin-right: 5%;
+    float: right;
+    width: 15%;
     text-align: center;
-    margin-left: 80%;
-    transform: (-50%, -50%);
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens smaller than 768px */
+  }
+  
+  @media (min-width: 768px) and (max-width: 1200px) {
     #buttonprj {
-        margin-left: 70%;
+        margin-top: 8%;
+        margin-right: 9%;
+        width: 18%;
     }
-}
-
-@media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
+  }
+  
+  @media (max-width: 768px) {
     #buttonprj {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50%;
-        margin-left: 33.5%;
-        transform: translate(0, -50%);
+        width: 50%;
+      margin-top: 25%;
+      transform: translate(0, -50%);
+      margin-right: 25%;
     }
-}
+  }
 
 /*****************contact me page*******************/
 
@@ -480,7 +517,7 @@ body {
     display: table;
     margin-left: 33%;
     width: 33%;
-    background-color: #e0e0e0;
+    background-color: #c8ddffd7;
     text-orientation: sideways;
     border-radius: 5px;
 }
@@ -593,7 +630,7 @@ body {
 #day {
     margin: 10px;
     padding: 10px;
-    background-color: hsl(0, 0%, 85%);
+    background-color: #e7f0ffef;
     border-radius: 5px;
     text-align: center;
     width: 150px;
@@ -608,7 +645,7 @@ body {
 
 
 #day:nth-child(odd) {
-    background-color: #c9c8c8;
+    background-color: #d5e5ffee;
 }
 
 #day>div {

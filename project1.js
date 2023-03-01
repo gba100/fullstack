@@ -88,3 +88,15 @@ function detectLanguage(text) {
     return "english";
 }
 
+window.addEventListener('load', function() {
+    // Set default city to "Tel Aviv"
+    document.getElementById("city").value = "Tel Aviv";
+    
+    // Call submit function on form
+    document.getElementById("submit-btn").click();
+  });
+  window.addEventListener('load', function() {
+    document.querySelector('.mt-3').click();
+    document.getElementById("city").value = "";
+});
+
