@@ -8,14 +8,14 @@ body {
     margin: 5% auto;
     height: 100%;
     background-image: url("background.jpg");
-
+    background-size: cover;
 }
 
 .center {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 0% auto;
+    margin: 5% auto;
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
@@ -27,16 +27,20 @@ body {
 #homesize {
     background-color: #3579f700;
     margin: 0;
-    padding: 5% 0;
+    padding: 3% 0;
+    height: 100%;
+
 }
 
 #pagessize {
     height: 100dvh;
     margin: 0;
-    padding: 5% 0;
+    padding-top: 1.5%;
+
 }
 
 @media (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
     #pagessize,
     #homesize {
@@ -49,10 +53,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+
     #pagessize,
     #homesize {
         margin-top: 1rem;
-        padding-top: 10%;
+        padding-top: 8%;
         height: auto;
         min-height: 50rem;
     }
@@ -61,56 +66,13 @@ body {
 
 /************************navbar***********************/
 
-#navbar{
-background: rgba(0, 0, 0, 0.521);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(1.5px);
--webkit-backdrop-filter: blur(1.5px);
-}
-/*
-.nav {
-    float: right;
-    margin: 5% auto;
+#navbar {
+    background: rgba(0, 0, 0, 0.521);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar-toggler {
-        display: block;
-    }
-}*/
-
-/*
-.topleft h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: fixed left;
-    margin-top: 0.8%;
-    margin-left: 0.4%;
-    float: left;
-    font-size: 80%;
-    border-radius: 15px;
-    background-color: #424242;
-    outline-color: #000000;
-    color: #fff;
-    text-shadow: #000 0px 0px 1px;
-    -webkit-font-smoothing: antialiased;
-    padding: 5px 20px;
-    border: 5px solid;
-    transition: 0.5s ease;
-}*/
-/*
-@media (max-width: 768px) {
-
-    .nav,
-    .topleft h3 {
-        float: none;
-        padding: 1%;
-        margin: 0%;
-        text-align: center;
-    }
-}*/
-
-
-/*top right button selection*/
 
 .navbtn {
     padding: 15px 15px;
@@ -122,6 +84,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .navbtn li {
         margin-top: 3%;
@@ -129,6 +92,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
     .navbtn li {
         margin-top: 3%;
@@ -158,6 +122,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .navbtn li a:hover {
         width: 100%;
@@ -181,6 +146,7 @@ backdrop-filter: blur(1.5px);
     width: 45%;
     height: auto;
 }
+
 /*
 .icon img {
     display: flex;
@@ -193,6 +159,7 @@ backdrop-filter: blur(1.5px);
 .social-icon {
     margin: 20px 10px;
 }
+
 /*
 .topsec {
     background-color: rgb(128, 0, 0);
@@ -217,7 +184,7 @@ backdrop-filter: blur(1.5px);
 
 /********************box (border of animated box) for index page************************/
 
-
+/*
 .box {
     position: relative;
     text-align: center;
@@ -240,7 +207,6 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
     .box {
         width: 80%;
         top: 0.8%;
@@ -254,7 +220,6 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-    /* styles for screens between 768px and 1200px */
     .box {
         width: 40%;
         margin-left: 30%;
@@ -263,7 +228,7 @@ backdrop-filter: blur(1.5px);
         width: 40%;
         height: 150px;
     }
-}
+}*/
 
 /*font last box on index page*/
 .box p {
@@ -289,9 +254,10 @@ backdrop-filter: blur(1.5px);
     height: 100px;
     background-color: #c8ddffd7;
     text-orientation: sideways;
-    transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; /* added transition property */
+    transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out;
+    /* added transition property */
     border-radius: 5px;
-    }
+}
 
 
 .slide.animate {
@@ -300,7 +266,7 @@ backdrop-filter: blur(1.5px);
     transform: translateX(50%);
     transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
     transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
-    
+
 }
 
 .slide.hide {
@@ -314,66 +280,43 @@ backdrop-filter: blur(1.5px);
     0% {
         right: -100px;
     }
+
     100% {
         right: calc(50% - 50px);
     }
 }
-/*
-.slide:hover {
-    position: relative;
-    text-align: center;
-    border-style: hidden;
-    border-width: 0px;
-    display: table;
-    width: 44%; 
-    height: 200px;
-    text-orientation: sideways;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-    border-radius: 5px;
-    background-color: #3579f7;
-    }
-    
-    .slide:not(:hover) { 
-    height: 100px;
-    transition: width 2s, height 2s, background-color 2s, transform 2s, opacity 0.5s ease-out; 
-    }
-*/
+
 
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .slide {
-        width: 80%;
-
+        width: 85%;
+        margin-top: 10%;
         top: 0.8%;
-        margin-left: 0%;
+        margin-left: -6%;
     }
-    .slide.animate{
-        transform: translateX(40px);
 
+    .slide.animate {
+        transform: translateX(15%);
     }
-    /*
-    .slide:hover {
-   width: 80%;
-        height: auto;
-    }*/
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
     .slide {
         width: 90%;
         top: 0.8%;
         margin-left: 0%;
     }
-    .slide.animate{
+
+    .slide.animate {
         transform: translateX(40px);
 
     }
-       /*
-    .slide:hover {
-   width: 80%;
-        height: auto;
-    }*/
+
 }
 
 .pill-container {
@@ -383,9 +326,9 @@ backdrop-filter: blur(1.5px);
     width: 2%;
     height: 2%;
     z-index: -1;
-  }
-  
-  .pills {
+}
+
+.pills {
     position: absolute;
     display: inline-block;
     padding: 6px 12px;
@@ -400,31 +343,35 @@ backdrop-filter: blur(1.5px);
     margin-left: 20%;
     z-index: -1;
     transform: translate(-50%, -50%);
-  }
-  
-  .pills.blue {
+}
+
+.pills.blue {
     background-color: #1772bd;
-  }
-  
-  .pills.animate {
+}
+
+.pills.animate {
     opacity: 1;
     animation-name: move-box;
     transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
     transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
-  }
-  
+}
+
 @keyframes float {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(200px, 200px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-  }
-  
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(200px, 200px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
 
 
 /*****************projects page*******************/
@@ -432,7 +379,6 @@ backdrop-filter: blur(1.5px);
 .projects {
     padding: 2%;
     margin: 5% auto;
-   
     text-align: left;
     width: 50%;
     background-color: #c8ddffd7;
@@ -441,6 +387,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .projects {
         margin-top: 10%;
@@ -452,6 +399,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
     .projects {
         margin-left: 10%;
@@ -460,31 +408,31 @@ backdrop-filter: blur(1.5px);
 }
 
 
-  
+
 .card-container {
     overflow: hidden;
-  }
-  
-  .card {
+}
+
+.card {
     float: left;
     width: 70%;
     height: 90%;
     padding: 3%;
-  }
-  
-  @media (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
     .card {
-      width: 60%;
-      padding: 3%;
+        width: 60%;
+        padding: 3%;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .card {
-      width: 90%;
-      margin-left: 5%;
+        width: 90%;
+        margin-left: 5%;
     }
-  }
+}
 
 
 /*project button*/
@@ -495,24 +443,24 @@ backdrop-filter: blur(1.5px);
     float: right;
     width: 15%;
     text-align: center;
-  }
-  
-  @media (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
     #buttonprj {
         margin-top: 8%;
         margin-right: 9%;
         width: 18%;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     #buttonprj {
         width: 50%;
-      margin-top: 25%;
-      transform: translate(0, -50%);
-      margin-right: 25%;
+        margin-top: 25%;
+        transform: translate(0, -50%);
+        margin-right: 25%;
     }
-  }
+}
 
 /*****************contact me page*******************/
 
@@ -535,6 +483,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .contact {
         top: 2%;
@@ -544,6 +493,7 @@ backdrop-filter: blur(1.5px);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
     .contact {
         top: 5%;
@@ -566,6 +516,17 @@ backdrop-filter: blur(1.5px);
     font-weight: bold;
 }
 
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    /* styles for screens between 768px and 1200px */
+    .copyright-container {
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media (min-width: 768px) {
     .copyright-container {
         bottom: 0;
@@ -577,10 +538,11 @@ backdrop-filter: blur(1.5px);
 
 /*******************************project 1*************************************/
 
-#city{
+#city {
     box-shadow: 0 0 5pt 2pt #D3D3D3;
     outline-width: 0px;
 }
+
 /*5 day forcast*/
 /*
 
@@ -604,7 +566,9 @@ backdrop-filter: blur(1.5px);
     width: 400pt;
 
 }
+
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
     .form input {
         width: 85%;
@@ -618,7 +582,7 @@ backdrop-filter: blur(1.5px);
     color: #fff;
     border: none;
     border-radius: 7px;
-    margin-top: 5px ;
+    margin-top: 5px;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -643,7 +607,8 @@ backdrop-filter: blur(1.5px);
     text-align: center;
     width: 150px;
 }
-#day.current{
+
+#day.current {
     /*background-color:rgb(100, 139, 116);*/
     margin: 0% auto;
     margin-top: 30px;
@@ -670,19 +635,34 @@ backdrop-filter: blur(1.5px);
     font-size: 16px;
 }
 
-#icon{
+#icon {
     margin-left: 4%;
-    float:left;
+    float: left;
     height: auto;
     width: auto;
 }
-#sunset , #sunrise, #desc, #windSpeed ,#humidity,#temp{
-margin-top: 1%;
-margin-left: 55%;
+
+#sunset,
+#sunrise,
+#desc,
+#windSpeed,
+#humidity,
+#temp {
+    margin-top: 1%;
+    margin-left: 55%;
 }
+
 @media (max-width: 768px) {
+
     /* styles for screens smaller than 768px */
-    #sunset , #sunrise, #desc, #windSpeed ,#humidity,#temp,#icon,#day.current {
+    #sunset,
+    #sunrise,
+    #desc,
+    #windSpeed,
+    #humidity,
+    #temp,
+    #icon,
+    #day.current {
         top: 2%;
         margin-left: 5%;
         margin-right: 5%;
@@ -691,14 +671,22 @@ margin-left: 55%;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+
     /* styles for screens between 768px and 1200px */
-    #sunset , #sunrise, #desc, #windSpeed ,#humidity,#temp,#day.current {
+    #sunset,
+    #sunrise,
+    #desc,
+    #windSpeed,
+    #humidity,
+    #temp,
+    #day.current {
         top: 5%;
         margin-left: 15%;
         width: 70%;
     }
 }
-#cityName{
+
+#cityName {
     margin-left: 40%;
     width: fit-content;
 }

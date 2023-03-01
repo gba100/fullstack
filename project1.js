@@ -45,7 +45,7 @@ form.addEventListener('submit', event => {
             var temp = Math.round(data.main.temp - 273.15);
             if (language === "he") {
                 $("#cityName").text(city);
-                $("#temp").text(String(temp) + "°C" + " : טמפרטורה");
+                $("#temp").text(String(temp) + "°C" );
                 $("#humidity").text("לחות: " + data.main.humidity + "%");
                 $("#windSpeed").text(data.wind.speed + "m/s" + " :מהירות הרוח");
                 $("#desc").text("תיאור" + ": " + data.weather[0].description);
