@@ -44,7 +44,7 @@ form.addEventListener('submit', event => {
         .then(data => {
             var temp = Math.round(data.main.temp - 273.15);
             if (language === "he") {
-                $("#cityName").text("עיר" + ": " + city);
+                $("#cityName").text(city);
                 $("#temp").text(String(temp) + "°C" + " : טמפרטורה");
                 $("#humidity").text("לחות: " + data.main.humidity + "%");
                 $("#windSpeed").text(data.wind.speed + "m/s" + " :מהירות הרוח");
@@ -57,8 +57,8 @@ form.addEventListener('submit', event => {
                     "@4x.png'>"
                 );
             } else {
-                $("#cityName").text("City: " + data.name);
-                $("#temp").text("Temperature: " + temp + "°C");
+                $("#cityName").text(data.name);
+                $("#temp").text( temp + "°C");
                 $("#humidity").text("Humidity: " + data.main.humidity + "%");
                 $("#windSpeed").text("Wind Speed: " + data.wind.speed + "m/s");
                 $("#desc").text("Description: " + data.weather[0].description);

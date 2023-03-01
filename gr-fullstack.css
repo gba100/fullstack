@@ -7,7 +7,7 @@ body {
     margin: 0px;
     margin: 5% auto;
     height: 100%;
-    background-image: url("blue-concrete-wall-with-scratches.jpg");
+    background-image: url("background.jpg");
 
 }
 
@@ -60,6 +60,14 @@ body {
 
 
 /************************navbar***********************/
+
+#navbar{
+background: rgba(0, 0, 0, 0.521);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.5px);
+-webkit-backdrop-filter: blur(1.5px);
+}
+/*
 .nav {
     float: right;
     margin: 5% auto;
@@ -69,9 +77,9 @@ body {
     .navbar-toggler {
         display: block;
     }
-}
+}*/
 
-
+/*
 .topleft h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: fixed left;
@@ -88,10 +96,10 @@ body {
     padding: 5px 20px;
     border: 5px solid;
     transition: 0.5s ease;
-}
-
+}*/
+/*
 @media (max-width: 768px) {
-    /* styles for screens smaller than 768px */
+
     .nav,
     .topleft h3 {
         float: none;
@@ -99,7 +107,7 @@ body {
         margin: 0%;
         text-align: center;
     }
-}
+}*/
 
 
 /*top right button selection*/
@@ -266,7 +274,6 @@ body {
 
 .slide {
     margin-top: 2%;
-    top: 80%;
     padding-top: 1%;
     padding-bottom: 1%;
     height: 200px;
@@ -595,6 +602,7 @@ body {
     border-radius: 5px;
     margin-left: 10px;
     width: 400pt;
+
 }
 @media (max-width: 768px) {
     /* styles for screens smaller than 768px */
