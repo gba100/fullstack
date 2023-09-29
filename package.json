@@ -1,5 +1,37 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.0-alpha1"
-  }
+    "name": "todolist",
+    "version": "1.0.0",
+    "description": "",
+    "main": "project2.js",
+    "dependencies": {
+        "ansi-styles": "^4.3.0",
+        "async": "^3.2.4",
+        "balanced-match": "^1.0.2",
+        "body-parser": "^1.20.2",
+        "bootstrap": "^5.3.0-alpha1",
+        "brace-expansion": "^1.1.11",
+        "chalk": "^4.1.2",
+        "color-convert": "^2.0.1",
+        "color-name": "^1.1.4",
+        "concat-map": "^0.0.1",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "filelist": "^1.0.4",
+        "has-flag": "^4.0.0",
+        "jake": "^10.8.5",
+        "lodash": "^4.17.21",
+        "minimatch": "^3.1.2",
+        "mongodb": "^5.2.0",
+        "nodemon": "^2.0.22",
+        "supports-color": "^7.2.0"
+    },
+    "scripts": {
+        "test": "\"echo \\Error:no test specified\\\"&& exit 1\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "Fullstack"
+    },
+    "author": "Gal rozenbaum",
+    "license": "ISC"
 }
